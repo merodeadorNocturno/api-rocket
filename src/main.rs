@@ -4,34 +4,10 @@ extern crate serde;
 
 
 use rocket::serde::json::Json;
-use serde::{Serialize, Deserialize};
 use uuid::Uuid;
 
-#[derive(Serialize, Deserialize, Debug)]
-struct Message {
-  message: String,
-}
-
-#[derive(Serialize, Deserialize, Debug)]
-enum Gender {
-  Male,
-  Female,
-  NonBinary,
-  Transgender,
-}
-
-#[derive(Serialize, Deserialize, Debug)]
-struct User {
-  id: String,
-  name: String,
-  last_name: String,
-  user_name: String,
-  age: u8,
-  email: String,
-  deleted: bool,
-  gender: Gender,
-}
-
+mod definitions;
+use definitions::{ Message, Gender, User };
 
 #[get("/<name>/<age>")]
 fn user(name: &str, age: u8) -> Json<Message> {
