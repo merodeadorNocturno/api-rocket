@@ -1,0 +1,11 @@
+[default]
+address = "127.0.0.1"
+port = 3030
+workers = 16
+max_blocking = 512
+keep_alive = 5
+ident = "Rocket"
+ip_header = false # "X-Real-IP" # set to `false` to disable
+log_level = "normal"
+temp_dir = "/tmp"
+cli_colors = true
