@@ -4,7 +4,7 @@ use uuid::Uuid;
 mod definitions;
 use definitions::{ Classroom, ClassroomName};
 
-#[get("/classrooms")]
+#[get("/")]
 pub fn classrooms() -> Json<Classroom> {
   let my_uuid = Uuid::new_v4();
 

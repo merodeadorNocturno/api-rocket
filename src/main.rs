@@ -6,7 +6,7 @@ mod routes {
   pub mod classrooms;
 }
 use routes::users::{ user, user_by_name };
-use routes::classrooms::{ classrooms };
+use routes::classrooms::classrooms;
 
 #[launch]
 fn rocket() -> _ {
